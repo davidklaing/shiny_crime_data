@@ -34,24 +34,22 @@ shinyUI(fluidPage(theme=shinytheme("united"),
                                              choices = unique(crime_data$department_name)),
                                  selectInput('comparison_department',
                                              label = 'Comparison Department:',
-                                             choices = unique(crime_data$department_name))
-                                 ),
-                          column(3, offset = 1,
+                                             choices = unique(crime_data$department_name)),
                                  sliderInput("years",
                                              label = "Year range:",
                                              min=1975,
                                              max=2015,
                                              value=c(1975,2015),
                                              step = 1,
-                                             round = FALSE),
+                                             round = FALSE)
+                                 ),
+                          column(3,
                                  radioButtons("abs_or_rel",
                                               "Scale:",
                                               choices = c("Absolute", "Relative"),
                                               selected = "Absolute",
                                               inline = FALSE,
-                                              width = NULL)
-                                 ),
-                          column(3, offset = 1,
+                                              width = NULL),
                                  checkboxInput("raw_or_norm",
                                                label = "Show raw counts",
                                                value = FALSE),
@@ -64,15 +62,15 @@ shinyUI(fluidPage(theme=shinytheme("united"),
                                              max=0.4,
                                              value=0.2,
                                              step = 0.05,
-                                             round = FALSE)
+                                             round = FALSE),
+                                 tags$button(
+                                         id = 'close',
+                                         type = "button",
+                                         class = "btn action-button",
+                                         onclick = "window.close()",
+                                         "Close"
                                  )
-                          ),
-                  tags$button(
-                          id = 'close',
-                          type = "button",
-                          class = "btn action-button",
-                          onclick = "window.close()",
-                          "Close"
-                  )
+                                 )
                   )
         )
+)
