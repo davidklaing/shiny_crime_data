@@ -3,8 +3,8 @@ title: shiny_crime_data
 account: laingdk
 server: shinyapps.io
 appId: 167422
-bundleId: 764792
+bundleId: 764819
 url: https://laingdk.shinyapps.io/shiny_crime_data/
-when: 1490597426.84152
+when: 1490599220.2332
 asMultiple: FALSE
 asStatic: FALSE
