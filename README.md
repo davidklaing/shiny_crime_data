@@ -1,5 +1,5 @@
 # shiny_crime_data
-A shiny app for visualizing US crime data from 1975-2015.
+A shiny app for visualizing US crime data from 1975-2015. The live app can be viewed [here](https://laingdk.shinyapps.io/shiny_crime_data/).
 
 Data from the [Marshall Project](https://github.com/themarshallproject/city-crime).
 
